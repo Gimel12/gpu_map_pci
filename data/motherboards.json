@@ -1,0 +1,35 @@
+{
+  "Asrock wrx 90 evo": {
+    "slot_count": 7,
+    "slots": {
+      "1": {
+        "bus_id": "<i>Unmapped</i>",
+        "uuid": "<i>Unmapped</i>"
+      },
+      "2": {
+        "bus_id": "0,00000000:01:00.0",
+        "uuid": "GPU-97375ac3-ebca-8adb-d6ad-4717a2811e1f"
+      },
+      "3": {
+        "bus_id": "2,00000000:41:00.0",
+        "uuid": "GPU-964f54f9-2461-abe2-a24b-f4aaa9c3a38a"
+      },
+      "4": {
+        "bus_id": "1,00000000:21:00.0",
+        "uuid": "GPU-75c55a6e-0daa-83e5-b2ca-598bae2d65e2"
+      },
+      "5": {
+        "bus_id": "3,00000000:E1:00.0",
+        "uuid": "GPU-e05b1a55-9f25-9b6b-1d06-70c2b43fcd66"
+      },
+      "6": {
+        "bus_id": "4,00000000:AA:00.0",
+        "uuid": "GPU-56fa334e-78ba-d9bd-82a1-21a515ecbe00"
+      },
+      "7": {
+        "bus_id": "1,00000000:02:00.0",
+        "uuid": "GPU-2923d4fc-61fa-b2e6-e1ca-e0cad3dc6082"
+      }
+    }
+  }
+}

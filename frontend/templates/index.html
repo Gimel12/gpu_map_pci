@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPU Location Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        #main-container { max-width: 800px; margin: 2em auto; padding: 1em; background: #333; border-radius: 8px; box-shadow: 0 2px 8px #444; }
+        .card { background: #444; border-radius: 8px; box-shadow: 0 2px 8px #555; padding: 1em 1.5em; margin-bottom: 1em; }
+        .slot-grid { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1em; }
+        .slot-card { background: #555; border-radius: 8px; box-shadow: 0 2px 8px #666; padding: 1em 1.5em; min-width: 120px; text-align: center; font-weight: 500; }
+        .slot-label { color: #7fff00; font-size: 1.1em; margin-bottom: 0.2em; }
+        .gpu-id { font-size: 0.95em; color: #bbb; }
+        .board-select { width: 100%; padding: 0.5em; border-radius: 4px; border: 1px solid #666; margin-bottom: 1em; }
+        #detect-btn { background: #28a745; color: #fff; padding: 0.5em 1em; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <h1 style="color: #7fff00;">GPU Location Board</h1>
+        <div class="card">
+            <label for="motherboard-select" style="font-weight:700;color:#fff;">Motherboard Model:</label>
+            <select id="motherboard-select" class="board-select"></select>
+            <button id="detect-btn">Detect Current GPUs</button>
+        </div>
+        <div id="slot-grid" class="slot-grid"></div>
+        <div class="card">
+            <h2 style="margin-top:0;font-size:1.2em;color:#7fff00;">How does this app work?</h2>
+            <ol style="font-size:1em;line-height:1.7;color:#fff;">
+                <li><b>Select your motherboard model</b> from the dropdown menu above.</li>
+                <li>Click <b>"Detect Current GPUs"</b> to automatically detect all NVIDIA GPUs currently installed in your system.</li>
+                <li>The app will show each PCIe slot on your motherboard and display which GPU (by index and model name) is detected in each slot.</li>
+                <li>If you have an issue with a specific GPU (e.g., <b>GPU 3</b>), use this board to <b>find the exact physical slot</b> where that GPU is located in your system.</li>
+            </ol>
+            <div style="margin-top:1em;color:#bbb;">
+                <b>Tip:</b> Use this tool to quickly identify and troubleshoot GPU placement, swaps, or hardware issues. The slot numbers correspond to the physical PCIe slots on your motherboard.
+            </div>
+        </div>
+    </div>
+    <hr>
+    <script src="/static/main.js"></script>
+</body>
+</html>
